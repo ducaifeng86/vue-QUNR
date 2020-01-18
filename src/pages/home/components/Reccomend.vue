@@ -5,8 +5,8 @@
 			<li class="item border-bottom" v-for="item in recommendList" :Key="item.id">
 				<img class="item-img" :src="item.imgUrl" />
 				<div class="item-info">
-					<p class="item-title">{{item.recommendTitle}}</p>
-					<p class="item-desc">{{item.recommendDesc}}</p>
+					<p class="item-title">{{item.title}}</p>
+					<p class="item-desc">{{item.desc}}</p>
 					<button class="item-button">查看详情</button>
 				</div>
 			</li>
@@ -18,25 +18,8 @@
 <script>
 	export default{
 		name:'HomeReccomend',
-		data(){
-			return {
-					recommendList:[{
-						id:'0001',
-						imgUrl:'',
-						recommendTitle:'表题呀哈哈表题呀哈哈表题呀哈哈',
-						recommendDesc:'描述呀描述呀描述呀描述呀'
-					},{
-						id:'0002',
-						imgUrl:'',
-						recommendTitle:'表题呀哈哈表题呀哈哈表题呀哈哈',
-						recommendDesc:'描述呀描述呀描述呀描述呀'
-					},{
-						id:'0003',
-						imgUrl:'',
-						recommendTitle:'表题呀哈哈表题呀哈哈表题呀哈哈',
-						recommendDesc:'描述呀描述呀描述呀描述呀'
-				}]
-			}
+		props:{
+			recommendList:Array
 		}
 	}
 </script>

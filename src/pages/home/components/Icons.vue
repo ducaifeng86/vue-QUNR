@@ -1,6 +1,6 @@
 <template>
 	<div class="icons">
-		<swiper>
+		<swiper :options="swiperOption">
 			<swiper-slide v-for="(page,index) in pages" :key="index">
 				<div class="icon" v-for="item in page" :key="item.id">
 					<div class="icon-img">
@@ -16,50 +16,14 @@
 <script>
 	export default{
 		name:'Icons',
+		props:{
+			iconList:Array
+		},
 		data(){
 			return {
-				iconList:[{
-					id:'0001',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0002',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0003',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0004',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0005',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0006',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0007',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0008',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0009',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				},{
-					id:'0010',
-					imgUrl:'https://gw.alicdn.com/tfs/TB18l5SiHvpK1RjSZPiXXbmwXXa-86-86.png',
-					desc:'热门景点'
-				}],
-				tst:'内容'
+				swiperOption:{
+					autoplay:false
+				}
 			}
 		},
 		computed: {

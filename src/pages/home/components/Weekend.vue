@@ -2,13 +2,13 @@
 	<div>
 		<div class="reccomend-title">周末去哪儿</div>
 		<ul>
-			<li class="item border-bottom" v-for="item in recommendList" :Key="item.id">
+			<li class="item border-bottom" v-for="item in weekendList" :Key="item.id">
 				<div class="item-img-wrapper">
 					<img class="item-img" :src="item.imgUrl" />
 				</div>
 				<div class="item-info">
-					<p class="item-title">{{item.recommendTitle}}</p>
-					<p class="item-desc">{{item.recommendDesc}}</p>
+					<p class="item-title">{{item.title}}</p>
+					<p class="item-desc">{{item.desc}}</p>
 				</div>
 			</li>
 		</ul>
@@ -19,25 +19,8 @@
 <script>
 	export default{
 		name:'HomeWeekend',
-		data(){
-			return {
-					recommendList:[{
-						id:'0001',
-						imgUrl:'',
-						recommendTitle:'表题呀哈哈表题呀哈哈表题呀哈哈',
-						recommendDesc:'描述呀描述呀描述呀描述呀'
-					},{
-						id:'0002',
-						imgUrl:'',
-						recommendTitle:'表题呀哈哈表题呀哈哈表题呀哈哈',
-						recommendDesc:'描述呀描述呀描述呀描述呀'
-					},{
-						id:'0003',
-						imgUrl:'',
-						recommendTitle:'表题呀哈哈表题呀哈哈表题呀哈哈',
-						recommendDesc:'描述呀描述呀描述呀描述呀'
-				}]
-			}
+		props:{
+			weekendList:Array
 		}
 	}
 </script>
@@ -51,7 +34,7 @@
 	.item-img-wrapper
 		overflow:hidden
 		height:0
-		padding-bottom:33.9%
+		padding-bottom:37.09%
 		.item-img
 			width:100%
 		.item-info
